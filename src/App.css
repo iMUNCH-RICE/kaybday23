@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@400;700&family=Itim&display=swap');
+
+/* ===============
+   DEFAULT STYLES
+==================*/
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  /* line-height: 1.5; */
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* ===============
+   GENERAL STYLES
+==================*/
+.App {
+  /* background-color: beige; */
+  /* position: relative;
+  background-image: url(./bg1.jpg);
+  background-size: cover; */
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.App::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./bg1.jpg');
+  background-size: contain;
+  background-repeat: repeat;
+  opacity: 0.15;
+  z-index: -1;
+}
+
+.main {
+  margin: 8rem;
+}
+
+/* ===============
+    TYPOGRAPHY
+==================*/
+.quote-container {
+  color: green;
+}
+
+.quote {
+  font-family: 'Glory', sans-serif;
+  font-size: 2rem;
+}
+
+.author {
+  font-family: 'Itim', sans-serif;
+  font-size: 1.5rem;
+  text-align: right;
+  padding: 1rem;
+}
+
+.timer-type {
+  color: green;
+  font-family: 'Itim', sans-serif;
+  font-size: 4rem;
+  font-weight: 100;
+}
+
+.time-left {
+  color: green;
+  font-family: 'Glory', sans-serif;
+  font-size: 6rem;
+}
+
+h2.break-length-title {
+  color: green;
+  font-family: 'Itim', sans-serif;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+h2.session-length-title {
+  color: green;
+  font-family: 'Itim', sans-serif;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+/* ===============
+    STYLES
+==================*/
+.character-image-container {
+  width: 33%;
+}
+
+/* .settings-container {
+  width: 50%;
+} */
+.card {
+  display: flex;
+  justify-content: space-around;
+}
+
+.timer-container {
+  /* width: 50%; */
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+}
+
+.clock {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.play-pause-btn-group {}
+
+.btn-play {
+  margin: 4rem;
+  padding: 2rem;
+}
