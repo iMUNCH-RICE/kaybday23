@@ -17,12 +17,7 @@ function App() {
                 <p className="time-left">25:00</p>
                 <button className="btn-refresh">@</button>
               </div>
-              <div className="play-pause-btn-group">
-                {/* <button className="btn-pause">||</button> */}
-                <button className="btn-play">V</button>
-              </div>
             </div>
-
             <div className="settings-container">
               <div className="break-length-container">
                 <h2 className="break-length-title">Break Length</h2>
@@ -38,10 +33,13 @@ function App() {
               </div>
             </div>
           </div>
-
-          <div className="character-image-container">
-            <img src={zoroPic} />
-          </div>
+        </div>
+        <div className="play-pause-btn-group">
+          {/* <button className="btn-pause">||</button> */}
+          <button className="btn-play">V</button>
+        </div>
+        <div className="character-image-container">
+          <img src={zoroPic} />
         </div>
       </main >
     </div>

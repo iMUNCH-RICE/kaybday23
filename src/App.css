@@ -88,6 +88,29 @@ h6 {
 
 .main {
   margin: 8rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-areas:
+    "quote quote quote"
+    "card play-pause char-img";
+  justify-items: center;
+}
+
+/* .main Grid Areas */
+.quote-container {
+  grid-area: quote;
+}
+
+.card {
+  grid-area: card;
+}
+
+.play-pause-btn-group {
+  grid-area: play-pause;
+}
+
+.character-image-container {
+  grid-area: char-img;
 }
 
 /* ===============
@@ -140,15 +163,17 @@ h2.session-length-title {
     STYLES
 ==================*/
 .character-image-container {
-  width: 33%;
+  width: 100%;
 }
 
 /* .settings-container {
   width: 50%;
 } */
+
 .card {
-  display: flex;
-  justify-content: space-around;
+  text-align: right;
+  /* display: flex;
+  justify-content: space-around; */
 }
 
 .timer-container {
@@ -156,19 +181,23 @@ h2.session-length-title {
 }
 
 .timer {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
 }
 
 .clock {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: end; */
 }
 
-.play-pause-btn-group {}
+.play-pause-btn-group {
+  /* justify-self: start; */
+}
 
 .btn-play {
-  margin: 4rem;
+  /* margin: 4rem;
+  padding: 2rem; 
+  margin: auto; */
   padding: 2rem;
 }
