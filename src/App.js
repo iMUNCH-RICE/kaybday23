@@ -6,24 +6,26 @@ import QuoteDisplay from './components/QuoteDisplay.jsx'
 // function App() {
 //   return (
 //     <div className="App">
-//       <main className="content">
-//         <div className="card">
-//           <div className="clock">
+//       <main className="content layout-row">
 
-//             <div className="play-button">
+//         <div className="card layout-row">
+
+//           <div className="clock layout-row">
+//             <div className="play-button layout-col">
 //             </div>
-//             <div className="timer-type">
-//               <div className="time-left"></div>
-//               <div className="type-settings"></div>
+//             <div className="timer-type layout-col">
+//               <div className="time-left layout-row"></div>
+//               <div className="type-settings layout-row"></div>
 //             </div>
 //           </div>
-//           <div className="timer-more-settings">
-//             <div className="reset-button"></div>
-//             <div className="break-length"></div>
-//             <div className="session-length"></div>
+
+//           <div className="timer-more-settings layout-row">
+//             <div className="reset-button layout-col"></div>
+//             <div className="break-length layout-col"></div>
+//             <div className="session-length layout-col"></div>
 //           </div>
 //         </div>
-//         <div className="quote">
+//         <div className="quote layout-row">
 
 //         </div>
 //       </main>

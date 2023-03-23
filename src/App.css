@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Glory:wght@400;700&family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,400;0,700;1,400&family=Itim&display=swap');
 
 /* ===============
    DEFAULT STYLES
@@ -61,30 +61,37 @@ h6 {
 }
 
 /* ===============
+   Layout Grid
+==================*/
+
+.layout-row {
+  border: 3px solid magenta;
+}
+
+.layout-col {
+  border: 3px solid cyan;
+}
+
+/* ===============
    GENERAL STYLES
 ==================*/
-.App {}
 
+.App {
+  background-color: var(--primary-color);
+}
 
-
-main.content {
+.content {
   margin: auto;
-  border: 3px solid magenta;
-  background-color: gray;
+  background-color: white;
   height: 100vh;
   width: 60vw;
   display: flex;
-  /* use flexbox */
   flex-direction: column;
-  /* stack child elements vertically */
   justify-content: center;
-  /* center child elements vertically */
   align-items: center;
-  /* center child elements horizontally */
 }
 
 .card {
-  border: 3px solid magenta;
   height: 40vh;
   width: 50vw;
   display: grid;
@@ -93,74 +100,26 @@ main.content {
 }
 
 .clock {
-  border: 3px solid magenta;
   display: grid;
-  grid-template-columns: 1fr 2fr;  
-}
-
-.play-button {
-  border: 3px solid cyan;
+  gap: 1rem;
+  grid-template-columns: 1fr 2fr;
 }
 
 .timer-type {
-  border: 3px solid cyan;
   display: grid;
 }
 
-.time-left {
-  border: 3px solid magenta;
-}
-
-.type-settings {
-  border: 3px solid magenta;
-}
-
-
-
-
-
-
-
 .timer-more-settings {
-  border: 3px solid magenta;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.reset-button {
-  border: 3px solid cyan;
-
-}
-
-.break-length {
-  border: 3px solid cyan;
-
-}
-
-.session-length {
-  border: 3px solid cyan;
-  
-}
-
-
-
-
-
-
-
-
 .quote {
-  margin-top: 5vh;
-  /* add space between elements */
-  border: 3px solid magenta;
+  margin-top: 1rem;
   height: 20vh;
   width: 50vw;
   display: flex;
-  /* use flexbox */
   flex-direction: column;
-  /* stack child elements vertically */
   justify-content: center;
-  /* center child elements vertically */
   align-items: center;
-  /* center child elements horizontally */
 }

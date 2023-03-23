@@ -1,3 +1,5 @@
+import './TimerCard.css';
+
 import Clock from './Clock.jsx';
 import TimerMoreSettings from './TimerMoreSettings.jsx';
 

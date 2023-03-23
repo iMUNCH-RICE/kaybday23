@@ -1,0 +1,7 @@
+@import url('../variables.css');
+
+.time-left {
+  color: var(--primary-color);
+  font-family: 'Glory', sans-serif;
+  font-size: clamp(5rem, 12vw, 12rem);
+}

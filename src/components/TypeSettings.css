@@ -1,0 +1,22 @@
+@import url('../variables.css');
+
+.type-settings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timer-type {
+  color: var(--primary-color);
+  font-size: clamp(1.5rem, 1vw, 3rem);
+  font-family: 'Itim', Arial, Helvetica, sans-serif;
+}
+
+.btn-settings {
+  font-size: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+}

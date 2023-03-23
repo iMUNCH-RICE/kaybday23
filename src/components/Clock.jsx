@@ -1,11 +1,12 @@
 import PlayButton from './PlayButton.jsx';
-import TimerType from './TimerType.jsx';
+import TimerTypeSettings from './TimerTypeSettings.jsx';
+import './Clock.css'
 
 export default function Clock() {
   return (
-    <div className="clock">
+    <div className="clock layout-row">
       <PlayButton />
-      <TimerType />
+      <TimerTypeSettings />
     </div>
   );
 }
