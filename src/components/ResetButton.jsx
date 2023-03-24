@@ -1,3 +1,5 @@
+import './ResetButton.css';
+
 export default function ResetButton() {
   return (
     <div className="reset-button layout-col">
