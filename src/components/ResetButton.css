@@ -1,1 +1,17 @@
 @import url('../variables.css');
+
+.reset-button{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-reset {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 1rem;
+  width: 7rem;
+  height: 4.5rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 4px;
+}

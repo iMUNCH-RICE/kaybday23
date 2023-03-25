@@ -2,6 +2,7 @@ import './App.css';
 
 import TimerCard from './components/TimerCard.jsx'
 import QuoteDisplay from './components/QuoteDisplay.jsx'
+import pic from './assets/pic0.png'
 
 // function App() {
 //   return (
@@ -36,10 +37,13 @@ import QuoteDisplay from './components/QuoteDisplay.jsx'
 function App() {
   return (
     <div className="App">
+      <div className="bg-filter">
+      <img src={pic} alt="" className="char-img" />
       <main className="content">
         <TimerCard />
         <QuoteDisplay />
       </main>
+      </div>
     </div>
   );
 }

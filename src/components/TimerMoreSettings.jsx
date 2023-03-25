@@ -5,7 +5,7 @@ import SessionLength from './SessionLength.jsx';
 
 export default function TimerMoreSettings() {
   return (
-    <div className="timer-more-settings layout-row">
+    <div className="timer-more-settings">
       <ResetButton />
       <BreakLength />
       <SessionLength />

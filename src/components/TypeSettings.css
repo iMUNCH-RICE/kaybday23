@@ -8,7 +8,7 @@
 
 .timer-type {
   color: var(--primary-color);
-  font-size: clamp(1.5rem, 1vw, 3rem);
+  font-size: clamp(1.5rem, 2vw, 3rem);
   font-family: 'Itim', Arial, Helvetica, sans-serif;
 }
 

@@ -4,7 +4,7 @@ import './Clock.css'
 
 export default function Clock() {
   return (
-    <div className="clock layout-row">
+    <div className="clock">
       <PlayButton />
       <TimerTypeSettings />
     </div>

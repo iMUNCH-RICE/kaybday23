@@ -1,9 +1,8 @@
 @import url('../variables.css');
 
 .card {
-  border: 0.25rem solid var(--primary-color);
-  border-radius: 1rem;
-  background-color: white;
-  opacity: 0.74;
+  border: 0.5rem solid var(--primary-color);
+  border-radius: 2rem;
+  background-color: rgba(255,255,255,.74);
   margin-bottom: 2rem;
 }
