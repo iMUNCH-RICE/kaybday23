@@ -1,10 +1,10 @@
 import './TimeLeft.css'
 
 
-export default function TimeLeft() {
+export default function TimeLeft({ currentTime }) {
   return (
     <div className="time-left">
-      25:00
+      {currentTime}
     </div>
   );
 }

@@ -1,48 +1,29 @@
 import './App.css';
+import { useState, useEffect } from 'react';
 
 import TimerCard from './components/TimerCard.jsx'
 import QuoteDisplay from './components/QuoteDisplay.jsx'
 import pic from './assets/pic0.png'
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <main className="content layout-row">
-
-//         <div className="card layout-row">
-
-//           <div className="clock layout-row">
-//             <div className="play-button layout-col">
-//             </div>
-//             <div className="timer-type layout-col">
-//               <div className="time-left layout-row"></div>
-//               <div className="type-settings layout-row"></div>
-//             </div>
-//           </div>
-
-//           <div className="timer-more-settings layout-row">
-//             <div className="reset-button layout-col"></div>
-//             <div className="break-length layout-col"></div>
-//             <div className="session-length layout-col"></div>
-//           </div>
-//         </div>
-//         <div className="quote layout-row">
-
-//         </div>
-//       </main>
-//     </div>
-//   );
-// }
-
 function App() {
+  const [quote, setQuote] = useState("When the world shoves you around, you just gotta stand up and shove back. It’s not like somebody’s gonna save you if you start babbling excuses.")
+  const [author, setAuthor] = useState("Roronoa Zoro");
+  const [color, setColor] = useState('');
+
+  useEffect(() => {
+    setColor(getComputedStyle(document.documentElement).getPropertyValue('--primary-color'));
+  }, []);
+
+  console.log(color);
+
   return (
     <div className="App">
       <div className="bg-filter">
-      <img src={pic} alt="" className="char-img" />
-      <main className="content">
-        <TimerCard />
-        <QuoteDisplay />
-      </main>
+        <img src={pic} alt="" className="char-img" />
+        <main className="content">
+          <TimerCard color={color} />
+          <QuoteDisplay quote={quote} author={author} color={color} />
+        </main>
       </div>
     </div>
   );

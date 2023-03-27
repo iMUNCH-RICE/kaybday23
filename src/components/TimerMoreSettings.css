@@ -1,0 +1,21 @@
+@import url('../variables.css');
+
+.minus {
+  grid-area: minus;
+  color: var(--primary-color);
+  font-size: 4rem;
+  border: none;
+  padding: 0; /* set padding to 0 */
+  line-height: 2rem; /* set line-height equal to font-size */
+  background-color: transparent;
+}
+
+.plus {
+  grid-area: plus;
+  color: var(--primary-color);
+  font-size: 4rem;
+  border: none;
+  padding: 0; /* set padding to 0 */
+  line-height: 2rem; /* set line-height equal to font-size */
+  background-color: transparent;
+}
