@@ -3,6 +3,8 @@
 .card {
   border: 0.5rem solid var(--primary-color);
   border-radius: 2rem;
-  background-color: rgba(255,255,255,.74);
+  background-color: rgba(255, 255, 255, 0.74);
   margin-bottom: 2rem;
+  overflow: hidden; /* Add this line */
+  transition: height 2s;
 }

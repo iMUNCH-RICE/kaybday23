@@ -1,6 +1,8 @@
 import './TimerCard.css';
 import { useState, useEffect } from 'react';
 
+import Collapse from 'react-smooth-collapse';
+
 import Clock from './Clock.jsx';
 import TimerMoreSettings from './TimerMoreSettings.jsx';
 import zoroSound from '../assets/zoro_01.mp3';
@@ -60,7 +62,9 @@ export default function TimerCard() {
   };
 
   const handleToggleShowSettings = () => {
+    console.log(showSettings);
     setShowSettings(!showSettings);
+    console.log(showSettings);
   }
 
   const handleBreakLengthChange = (newBreakLength) => {
@@ -90,7 +94,7 @@ export default function TimerCard() {
 
   return (
     <div className="card">
-      <audio ref={handleAudioRef} src={zoroSound}/>
+      <audio ref={handleAudioRef} src={zoroSound} />
       <Clock
         currentTime={formatTime(currentTime)}
         timerMode={timerMode}
@@ -99,7 +103,7 @@ export default function TimerCard() {
         onClickStartTimer={handleStartTimer}
         timerRunning={timerRunning}
       />
-      {showSettings &&
+      <Collapse expanded={showSettings}>
         <TimerMoreSettings
           breakLength={breakLength}
           sessionLength={sessionLength}
@@ -107,7 +111,8 @@ export default function TimerCard() {
           onBreakLengthChange={handleBreakLengthChange}
           onSessionLengthChange={handleSessionLengthChange}
           formatTime={formatTime}
-        />}
+        />
+      </Collapse>
     </div>
   );
 }

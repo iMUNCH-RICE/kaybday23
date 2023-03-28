@@ -13,7 +13,6 @@
 }
 
 .btn-settings {
-  padding-bottom: 1rem;
   font-size: 1rem;
   width: 1.5rem;
   height: 1.5rem;
@@ -21,4 +20,17 @@
   border-radius: 50%;
   background-color: var(--secondary-color);
   cursor: pointer;
+  transition: transform 0.3s ease-in-out, scale 0.15s;
+}
+
+.btn-settings:hover {
+  transform: scale(2);
+}
+
+.btn-settings.rotate:hover {
+  transform: rotate(90deg) scale(2);
+}
+
+.rotate {
+  transform: rotate(90deg);
 }

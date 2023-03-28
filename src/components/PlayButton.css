@@ -13,22 +13,53 @@
   border-radius: 25%;
   box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 4px;
   position: relative;
-  cursor:pointer;
+  cursor: pointer;
+  transition: box-shadow .15s, background-color .15s, transform .15s, color .15s;
+}
+
+.play-button:hover {
+  box-shadow: none;
+  transform: translate(4px, 4px);
+}
+
+.pause-button:hover {
+  box-shadow: none;
+  background-color: #408D5A;
+}
+
+.pause-button:hover .pause-icon {
+  color: var(--secondary-color);
+}
+
+
+.play-button:active {
+  box-shadow: rgb(107, 150, 120) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.25) -3px -3px 6px 1px inset;
+}
+
+.pause-button:active {
+  box-shadow: #163b23a6 4px 4px 4px 0px inset, #408D5A -3px -3px 6px 1px inset;
 }
 
 .pause-button {
   width: 7rem;
   height: 7rem;
-  background-color: var(--secondary-color);
+  background-color:  var(--primary-color);
+  transform: translate(4px, 4px);
   border: none;
   border-radius: 25%;
-  box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 4px;
   position: relative;
-  cursor:pointer;
+  cursor: pointer;
+  transition: box-shadow .15s, background-color .15s, transform .15s;
+
 }
 
-.pause-icon,
+
 .play-icon {
   color: var(--primary-color);
+  pointer-events: none;
 }
 
+.pause-icon {
+  color: var(--secondary-color);
+  pointer-events: none;
+}
