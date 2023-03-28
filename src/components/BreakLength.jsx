@@ -6,15 +6,15 @@ export default function BreakLength(props) {
   }
 
   function handleClickMinus() {
-    if ((props.breakLength - 15) >= 0) {
-      const newBreakLength = props.breakLength - 15;
+    if ((props.breakLength - 30) >= 0) {
+      const newBreakLength = props.breakLength - 30;
       props.onBreakLengthChange(newBreakLength);
     }
   }
 
   function handleClickPlus() {
-    if ((props.breakLength + 15) < 3600) {
-      const newBreakLength = props.breakLength + 15;
+    if ((props.breakLength + 30) < 3600) {
+      const newBreakLength = props.breakLength + 30;
       props.onBreakLengthChange(newBreakLength);
     }
   }

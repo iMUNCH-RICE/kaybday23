@@ -6,15 +6,15 @@ export default function SessionLength(props) {
   }
 
   function handleClickMinus() {
-    if ((props.sessionLength - 15) >= 0) {
-      const newSessionLength = props.sessionLength - 15;
+    if ((props.sessionLength - 30) >= 0) {
+      const newSessionLength = props.sessionLength - 30;
       props.onSessionLengthChange(newSessionLength);
     }
   }
 
   function handleClickPlus() {
-    if ((props.sessionLength + 15) < 3600) {
-      const newSessionLength = props.sessionLength + 15;
+    if ((props.sessionLength + 30) < 3600) {
+      const newSessionLength = props.sessionLength + 30;
       props.onSessionLengthChange(newSessionLength);
     }
   }

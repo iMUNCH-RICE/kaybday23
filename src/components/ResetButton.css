@@ -13,6 +13,14 @@
   border-radius: 1rem;
   width: 7rem;
   height: 4.5rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 4px;
   cursor: pointer;
+  transition: box-shadow .15s, opacity .15s;
+}
+
+.btn-reset:hover {
+  opacity: .8;
+}
+
+.btn-reset:active {
+  box-shadow: #163b23a6 4px 4px 4px 0px inset, #408D5A -3px -3px 6px 1px inset;
 }

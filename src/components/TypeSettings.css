@@ -20,7 +20,7 @@
   border-radius: 50%;
   background-color: var(--secondary-color);
   cursor: pointer;
-  transition: transform 0.3s ease-in-out, scale 0.15s;
+  transition: transform 0.15s ease-in-out;
 }
 
 .btn-settings:hover {
