@@ -3,15 +3,17 @@ import { useState, useEffect } from 'react';
 
 import Clock from './Clock.jsx';
 import TimerMoreSettings from './TimerMoreSettings.jsx';
+import zoroSound from '../assets/zoro_01.mp3';
 
 export default function TimerCard() {
- 
-  const [sessionLength, setSessionLength] = useState(1);
-  const [breakLength, setBreakLength] = useState(3);
+
+  const [sessionLength, setSessionLength] = useState(1500);
+  const [breakLength, setBreakLength] = useState(300);
   const [timerMode, setTimerMode] = useState('SESSION');
   const [timerRunning, setTimerRunning] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  const [currentTime, setCurrentTime] = useState(1);
+  const [currentTime, setCurrentTime] = useState(1500);
+  const [audioElement, setAudioElement] = useState(null);
 
   useEffect(() => {
     let interval = null;
@@ -75,9 +77,20 @@ export default function TimerCard() {
     }
   };
 
+  useEffect(() => {
+    if (currentTime === 0 && audioElement) {
+      audioElement.volume = 0.25;
+      audioElement.play();
+    }
+  }, [currentTime, audioElement]);
+
+  const handleAudioRef = (element) => {
+    setAudioElement(element);
+  };
+
   return (
     <div className="card">
-
+      <audio ref={handleAudioRef} src={zoroSound}/>
       <Clock
         currentTime={formatTime(currentTime)}
         timerMode={timerMode}
