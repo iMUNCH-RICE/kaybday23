@@ -9,7 +9,7 @@ function App() {
   const [quote, setQuote] = useState("When the world shoves you around, you just gotta stand up and shove back. It’s not like somebody’s gonna save you if you start babbling excuses.")
   const [author, setAuthor] = useState("Roronoa Zoro");
   const [color, setColor] = useState('');
-
+  console.log("hello");
   useEffect(() => {
     setColor(getComputedStyle(document.documentElement).getPropertyValue('--primary-color'));
   }, []);
