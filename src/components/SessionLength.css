@@ -19,3 +19,7 @@
   justify-content: space-around;
   overflow: hidden;
 }
+
+.plus, .minus {
+  cursor: pointer;
+}

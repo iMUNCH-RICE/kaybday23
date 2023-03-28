@@ -1,24 +1,32 @@
 import './BreakLength.css';
 
 export default function BreakLength(props) {
+  function formatTime(time) {
+    return props.formatTime(time);
+  }
+
   function handleClickMinus() {
-    const newBreakLength = props.breakLength - 1;
-    props.onBreakLengthChange(newBreakLength);
+    if ((props.breakLength - 15) >= 0) {
+      const newBreakLength = props.breakLength - 15;
+      props.onBreakLengthChange(newBreakLength);
+    }
   }
 
   function handleClickPlus() {
-    const newBreakLength = props.breakLength + 1;
-    props.onBreakLengthChange(newBreakLength);
+    if ((props.breakLength + 15) < 3600) {
+      const newBreakLength = props.breakLength + 15;
+      props.onBreakLengthChange(newBreakLength);
+    }
   }
 
   return (
     <div className="break-length">
       <div className="time-break-container">
-        <button onClick={handleClickMinus} className="minus">-</button>
-        <p className="time-break">{props.breakLength}:00</p>
-        <button onClick={handleClickPlus} className="plus">+</button>
+        <button onClick={handleClickMinus} className="minus" id="break-decrement">-</button>
+        <p className="time-break" id="break-length">{formatTime(props.breakLength)}</p>
+        <button onClick={handleClickPlus} className="plus" id="break-increment">+</button>
       </div>
-      <p className="break-length-title">BREAK LENGTH</p>
+      <p className="break-length-title" id="break-label">BREAK LENGTH</p>
     </div>
   );
 }

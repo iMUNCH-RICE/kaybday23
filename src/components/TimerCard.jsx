@@ -1,35 +1,47 @@
 import './TimerCard.css';
-import { useState, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 import Clock from './Clock.jsx';
 import TimerMoreSettings from './TimerMoreSettings.jsx';
 
 export default function TimerCard() {
-  // state + handler is in this function because its children components both need info from this parent component and from each other
-
-  // const [currentTime, setCurrentTime] = useState(25)
-  //   25 * 60 = 1500s
-  const [currentTime, setCurrentTime] = useState(1500)
-  const [sessionLength, setSessionLength] = useState(25);
-  const [breakLength, setBreakLength] = useState(5);
-  const [timerType, setTimerType] = useState("SESSION");
+ 
+  const [sessionLength, setSessionLength] = useState(1);
+  const [breakLength, setBreakLength] = useState(3);
+  const [timerMode, setTimerMode] = useState('SESSION');
   const [timerRunning, setTimerRunning] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+  const [currentTime, setCurrentTime] = useState(1);
 
-  const intervalRef = useRef(null);
+  useEffect(() => {
+    let interval = null;
+    if (timerRunning) {
+      interval = setInterval(() => {
+        setCurrentTime((prevTime) => {
+          if (prevTime === 0) {
+            return switchTimer();
+          }
+          return prevTime - 1;
+        });
+      }, 1000);
+    } else {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [timerRunning, timerMode, breakLength, sessionLength]);
+
+
+  const switchTimer = () => {
+    setTimerMode((prevMode) => (prevMode === 'SESSION' ? 'BREAK' : 'SESSION'));
+    return timerMode === 'SESSION' ? breakLength : sessionLength;
+  };
 
   const handleStartTimer = () => {
-    console.log("start");
     setTimerRunning(true);
-    intervalRef.current = setInterval(() => {
-      setCurrentTime((prevTime) => prevTime - 1);
-    }, 1000);
   };
 
   const handlePauseTimer = () => {
-    console.log("pause");
     setTimerRunning(false);
-    clearInterval(intervalRef.current);
   };
 
   const formatTime = (time) => {
@@ -40,8 +52,9 @@ export default function TimerCard() {
 
   const handleResetTimer = () => {
     setTimerRunning(false);
-    clearInterval(intervalRef.current);
-    setCurrentTime(1500); // reset to 25 minutes
+    setSessionLength(1500);
+    setBreakLength(300);
+    setCurrentTime(timerMode === 'SESSION' ? 1500 : 300);
   };
 
   const handleToggleShowSettings = () => {
@@ -50,14 +63,14 @@ export default function TimerCard() {
 
   const handleBreakLengthChange = (newBreakLength) => {
     setBreakLength(newBreakLength);
-    if (timerType == "BREAK") {
+    if (timerMode === 'BREAK') {
       setCurrentTime(newBreakLength);
     }
   };
 
   const handleSessionLengthChange = (newSessionLength) => {
     setSessionLength(newSessionLength);
-    if (timerType == "SESSION") {
+    if (timerMode === 'SESSION') {
       setCurrentTime(newSessionLength);
     }
   };
@@ -65,7 +78,9 @@ export default function TimerCard() {
   return (
     <div className="card">
 
-      <Clock currentTime={formatTime(currentTime)}
+      <Clock
+        currentTime={formatTime(currentTime)}
+        timerMode={timerMode}
         onClickShowSettings={handleToggleShowSettings}
         onClickPauseTimer={handlePauseTimer}
         onClickStartTimer={handleStartTimer}
@@ -75,8 +90,10 @@ export default function TimerCard() {
         <TimerMoreSettings
           breakLength={breakLength}
           sessionLength={sessionLength}
+          onClickReset={handleResetTimer}
           onBreakLengthChange={handleBreakLengthChange}
           onSessionLengthChange={handleSessionLengthChange}
+          formatTime={formatTime}
         />}
     </div>
   );

@@ -14,8 +14,6 @@ function App() {
     setColor(getComputedStyle(document.documentElement).getPropertyValue('--primary-color'));
   }, []);
 
-  console.log(color);
-
   return (
     <div className="App">
       <div className="bg-filter">

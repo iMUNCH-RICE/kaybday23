@@ -7,7 +7,7 @@ export default function PlayButton({ onClickPauseTimer, onClickStartTimer, timer
   return (
     <div className="play-button-container">
       {timerRunning ?
-        <button className="pause-button" onClick={onClickPauseTimer}>
+        <button className="pause-button" onClick={onClickPauseTimer} id="start_stop">
           <FontAwesomeIcon icon={faPause} size="3x" className="pause-icon"/>
         </button> :
         <button className="play-button" onClick={onClickStartTimer}>
