@@ -62,9 +62,7 @@ export default function TimerCard() {
   };
 
   const handleToggleShowSettings = () => {
-    console.log(showSettings);
     setShowSettings(!showSettings);
-    console.log(showSettings);
   }
 
   const handleBreakLengthChange = (newBreakLength) => {
@@ -94,7 +92,7 @@ export default function TimerCard() {
 
   return (
     <div className="card">
-      <audio ref={handleAudioRef} src={zoroSound} />
+      <audio ref={handleAudioRef} src={zoroSound} id="beep"/>
       <Clock
         currentTime={formatTime(currentTime)}
         timerMode={timerMode}
@@ -103,7 +101,7 @@ export default function TimerCard() {
         onClickStartTimer={handleStartTimer}
         timerRunning={timerRunning}
       />
-      <Collapse expanded={showSettings}>
+      <Collapse expanded={showSettings && !timerRunning}>
         <TimerMoreSettings
           breakLength={breakLength}
           sessionLength={sessionLength}

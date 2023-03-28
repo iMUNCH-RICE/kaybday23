@@ -8,6 +8,8 @@
   padding: 0; /* set padding to 0 */
   line-height: 2rem; /* set line-height equal to font-size */
   background-color: transparent;
+  cursor: pointer;
+  transition: transform .15s;
 }
 
 .plus {
@@ -18,4 +20,10 @@
   padding: 0; /* set padding to 0 */
   line-height: 2rem; /* set line-height equal to font-size */
   background-color: transparent;
+  cursor: pointer;
+  transition: transform .15s;
+}
+
+.plus:hover, .minus:hover {
+  transform: scale(1.5);
 }

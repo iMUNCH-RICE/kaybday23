@@ -34,3 +34,7 @@
 .rotate {
   transform: rotate(90deg);
 }
+
+.btn-settings:disabled {
+  pointer-events: none;
+}
