@@ -40,7 +40,7 @@ function App() {
   ];
 
   const [quote, setQuote] = useState(quoteAuthorMedia[0]['quote']);
-  const [author, setAuthor] = useState(quoteAuthorMedia[1]['author']);
+  const [author, setAuthor] = useState(quoteAuthorMedia[0]['author']);
   const [primaryColor, setPrimaryColor] = useState('');
   const [secondaryColor, setSecondaryColor] = useState('');
   const [previousQuoteIndex, setPreviousQuoteIndex] = useState(null);
