@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/kaybday23/static/css/main.c3d96b0a.css",
+    "main.js": "/kaybday23/static/js/main.4d7ca9ff.js",
+    "static/js/787.9bc23d21.chunk.js": "/kaybday23/static/js/787.9bc23d21.chunk.js",
+    "static/media/zoro_01.mp3": "/kaybday23/static/media/zoro_01.699c5f77ccc4bf74829e.mp3",
+    "index.html": "/kaybday23/index.html",
+    "main.c3d96b0a.css.map": "/kaybday23/static/css/main.c3d96b0a.css.map",
+    "main.4d7ca9ff.js.map": "/kaybday23/static/js/main.4d7ca9ff.js.map",
+    "787.9bc23d21.chunk.js.map": "/kaybday23/static/js/787.9bc23d21.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3d96b0a.css",
+    "static/js/main.4d7ca9ff.js"
+  ]
+}
