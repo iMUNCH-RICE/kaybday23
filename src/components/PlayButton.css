@@ -24,7 +24,7 @@
 
 .pause-button:hover {
   box-shadow: none;
-  background-color: #408D5A;
+  background-color: var(--primary-color);
 }
 
 .pause-button:hover .pause-icon {
@@ -33,11 +33,11 @@
 
 
 .play-button:active {
-  box-shadow: rgb(107, 150, 120) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.25) -3px -3px 6px 1px inset;
+  box-shadow: rgb(153, 153, 153) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.25) -3px -3px 6px 1px inset;
 }
 
 .pause-button:active {
-  box-shadow: #163b23a6 4px 4px 4px 0px inset, #408D5A -3px -3px 6px 1px inset;
+  box-shadow: #272727a6 4px 4px 4px 0px inset;
 }
 
 .pause-button {
@@ -50,9 +50,7 @@
   position: relative;
   cursor: pointer;
   transition: box-shadow .15s, background-color .15s, transform .15s;
-
 }
-
 
 .play-icon {
   color: var(--primary-color);
@@ -63,3 +61,4 @@
   color: var(--secondary-color);
   pointer-events: none;
 }
+

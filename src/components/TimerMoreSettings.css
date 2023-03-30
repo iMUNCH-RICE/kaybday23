@@ -3,7 +3,7 @@
 .minus {
   grid-area: minus;
   color: var(--primary-color);
-  font-size: 4rem;
+  font-size: 2.5rem;
   border: none;
   padding: 0; /* set padding to 0 */
   line-height: 2rem; /* set line-height equal to font-size */
@@ -15,7 +15,7 @@
 .plus {
   grid-area: plus;
   color: var(--primary-color);
-  font-size: 4rem;
+  font-size: 2.5rem;
   border: none;
   padding: 0; /* set padding to 0 */
   line-height: 2rem; /* set line-height equal to font-size */
@@ -27,3 +27,13 @@
 .plus:hover, .minus:hover {
   transform: scale(1.5);
 }
+
+/* =============
+   MEDIA QUERIES
+   ============= */
+
+   @media screen and (min-width: 1024px) {
+    .plus, .minus {
+      font-size: 4rem;
+    }
+  }

@@ -90,9 +90,13 @@ export default function TimerCard() {
     setAudioElement(element);
   };
 
+  useEffect(() => {
+    document.title = `${timerMode} - ${formatTime(currentTime)}`;
+  }, [currentTime, formatTime]);
+
   return (
     <div className="card">
-      <audio ref={handleAudioRef} src={zoroSound} id="beep"/>
+      <audio ref={handleAudioRef} src={zoroSound} id="beep" />
       <Clock
         currentTime={formatTime(currentTime)}
         timerMode={timerMode}
