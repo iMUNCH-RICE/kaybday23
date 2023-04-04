@@ -65,7 +65,7 @@ function App() {
     },
     {
       id: 6,
-      quote: 'When the world shoves you around, you just gotta stand up and shove back. It’s not like somebody’s gonna save you if you start babbling excuses.',
+      quote: "You're my inspiration",
       author: 'Nico',
       photo: samplePic,
       audio: sampleAudio,
