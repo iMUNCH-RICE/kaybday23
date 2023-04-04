@@ -134,6 +134,22 @@ h6 {
   align-items: center;
 }
 
+.reroll-button {
+  color: var(--primary-color);
+  overflow: hidden;
+  margin-top: 8rem;
+  cursor: pointer;
+  transition: transform 0.15s ease-in-out;
+}
+
+.reroll-button:hover {
+  transform: scale(1.25) rotate(-90deg);
+}
+
+.reroll-button:active {
+  transform: rotate(90deg);
+}
+
 /* =============
    MEDIA QUERIES
    ============= */

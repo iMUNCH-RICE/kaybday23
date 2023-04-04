@@ -7,26 +7,78 @@ import QuoteDisplay from './components/QuoteDisplay.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRotate } from '@fortawesome/free-solid-svg-icons';
 
+import samplePic from './assets/pic0.png';
+import sampleAudio from './assets/zoro_01.mp3';
+
 function App() {
   const quoteAuthorMedia = [
     {
       id: 0,
       quote: 'Bark! Woof! Arf!',
       author: 'Evan Panlilio',
-      media: 'evan-media'
+      media: 'evan-media',
+      pic: null,
+      audio: null,
+      vid: null
     },
     {
       id: 1,
       quote: 'Example Quote 1',
-      author: 'Author 1',
+      author: 'Tita Ezcel',
       media: 'example-media-1',
+      photo: null,
+      audio: null,
+      video: null
     },
     {
       id: 2,
       quote: 'Example Quote 2',
-      author: 'Author 2',
+      author: 'Tito Reggie',
       media: 'example-media-2',
+      photo: null,
+      audio: null,
+      video: null
     },
+    {
+      id: 3,
+      quote: 'When the world shoves you around, you just gotta stand up and shove back. It’s not like somebody’s gonna save you if you start babbling excuses.',
+      author: 'Roronoa Zoro',
+      photo: samplePic,
+      audio: sampleAudio,
+      video: null
+    },
+    {
+      id: 4,
+      quote: 'When the world shoves you around, you just gotta stand up and shove back. It’s not like somebody’s gonna save you if you start babbling excuses.',
+      author: 'Mommy? I guess LOL',
+      photo: samplePic,
+      audio: sampleAudio,
+      video: null
+    },
+    {
+      id: 5,
+      quote: 'When the world shoves you around, you just gotta stand up and shove back. It’s not like somebody’s gonna save you if you start babbling excuses.',
+      author: 'Jessica',
+      photo: samplePic,
+      audio: sampleAudio,
+      video: null
+    },
+    {
+      id: 6,
+      quote: 'When the world shoves you around, you just gotta stand up and shove back. It’s not like somebody’s gonna save you if you start babbling excuses.',
+      author: 'Nico',
+      photo: samplePic,
+      audio: sampleAudio,
+      video: null
+    },
+    {
+      id: 7,
+      quote: 'When the world shoves you around, you just gotta stand up and shove back. It’s not like somebody’s gonna save you if you start babbling excuses.',
+      author: 'Danny',
+      photo: samplePic,
+      audio: sampleAudio,
+      video: null
+    }
   ];
 
   const primarySecondaryColorPairs = [
@@ -39,8 +91,11 @@ function App() {
     ['#FF7EA8', '#FFB2D9']
   ];
 
-  const [quote, setQuote] = useState(quoteAuthorMedia[0]['quote']);
-  const [author, setAuthor] = useState(quoteAuthorMedia[0]['author']);
+  const [quote, setQuote] = useState(quoteAuthorMedia[3]['quote']);
+  const [author, setAuthor] = useState(quoteAuthorMedia[3]['author']);
+  const [photo, setPhoto] = useState(quoteAuthorMedia[3]['photo']);
+  const [audio, setAudio] = useState(quoteAuthorMedia[3]['audio']);
+  const [video, setVideo] = useState(quoteAuthorMedia[3]['video']);
   const [primaryColor, setPrimaryColor] = useState('');
   const [secondaryColor, setSecondaryColor] = useState('');
   const [previousQuoteIndex, setPreviousQuoteIndex] = useState(null);
@@ -63,6 +118,9 @@ function App() {
     // Set the quote and author states
     setQuote(selectedQuote.quote);
     setAuthor(selectedQuote.author);
+    setPhoto(selectedQuote.photo);
+    setAudio(selectedQuote.audio);
+    setVideo(selectedQuote.video);
 
     // Select a random color pair from the list
     const randomColorIndex = getRandomIndex(previousColorIndex, primarySecondaryColorPairs.length);
@@ -85,9 +143,8 @@ function App() {
       <div className="bg-filter">
         <main className="content">
           <TimerCard />
-          <QuoteDisplay quote={quote} author={author} />
-          <FontAwesomeIcon icon={faRotate} onClick={generateNewQuoteAuthorMediaColors} size="2xl" style={{ color: "var(--primary-color)", overflow: "hidden", marginBlock: "2rem" }} />
-          {/* <button onClick={generateNewQuoteAuthorMediaColors}>Generate New Quote, Author, and Colors</button> */}
+          <QuoteDisplay quote={quote} author={author} photo={photo} audio={audio} video={video} />
+          <FontAwesomeIcon icon={faRotate} onClick={generateNewQuoteAuthorMediaColors} size="2xl" className="reroll-button" />
         </main>
       </div>
     </div>
