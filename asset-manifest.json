@@ -1,24 +1,28 @@
 {
   "files": {
-    "main.css": "/kaybday23/static/css/main.f6f4176b.css",
-    "main.js": "/kaybday23/static/js/main.68cb23b4.js",
+    "main.css": "/kaybday23/static/css/main.191a3daf.css",
+    "main.js": "/kaybday23/static/js/main.6358bff9.js",
     "static/js/787.9bc23d21.chunk.js": "/kaybday23/static/js/787.9bc23d21.chunk.js",
     "static/media/kay-nico-dance-vid.m4v": "/kaybday23/static/media/kay-nico-dance-vid.56243e449e66d79a21f5.m4v",
+    "static/media/danny-vid.m4v": "/kaybday23/static/media/danny-vid.2374c9e760fb104e7613.m4v",
     "static/media/tita-ezcel-vid.m4v": "/kaybday23/static/media/tita-ezcel-vid.bafea4f0bafee9abac0a.m4v",
+    "static/media/jessica-vid.m4v": "/kaybday23/static/media/jessica-vid.5afcba7b0cce1ef0f2d1.m4v",
     "static/media/levi-vid.m4v": "/kaybday23/static/media/levi-vid.8eab5d77ec975d50b56b.m4v",
     "static/media/evan-vid.m4v": "/kaybday23/static/media/evan-vid.b5881aea02d83fee7cdb.m4v",
     "static/media/tito-reggie-vid.m4v": "/kaybday23/static/media/tito-reggie-vid.be22f82864e47ea697eb.m4v",
     "static/media/pic0.png": "/kaybday23/static/media/pic0.9adca15cacd4258b6ddb.png",
+    "static/media/purple-v-vid.m4v": "/kaybday23/static/media/purple-v-vid.17cb0f87b86feb8d2419.m4v",
     "static/media/princess-meow-vid.m4v": "/kaybday23/static/media/princess-meow-vid.8b1c6eb87fe5eb198ee6.m4v",
     "static/media/mommy-pic.jpg": "/kaybday23/static/media/mommy-pic.f7cd11576c28f32f6447.jpg",
     "static/media/zoro_01.mp3": "/kaybday23/static/media/zoro_01.699c5f77ccc4bf74829e.mp3",
+    "static/media/v-photo.jpg": "/kaybday23/static/media/v-photo.887855806929b2a7cd9b.jpg",
     "index.html": "/kaybday23/index.html",
-    "main.f6f4176b.css.map": "/kaybday23/static/css/main.f6f4176b.css.map",
-    "main.68cb23b4.js.map": "/kaybday23/static/js/main.68cb23b4.js.map",
+    "main.191a3daf.css.map": "/kaybday23/static/css/main.191a3daf.css.map",
+    "main.6358bff9.js.map": "/kaybday23/static/js/main.6358bff9.js.map",
     "787.9bc23d21.chunk.js.map": "/kaybday23/static/js/787.9bc23d21.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f6f4176b.css",
-    "static/js/main.68cb23b4.js"
+    "static/css/main.191a3daf.css",
+    "static/js/main.6358bff9.js"
   ]
 }
