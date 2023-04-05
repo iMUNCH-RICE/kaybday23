@@ -13,12 +13,15 @@ import sampleAudio from './assets/zoro_01.mp3';
 import video0 from './assets/video/evan-vid.m4v';
 import video1 from './assets/video/tita-ezcel-vid.m4v';
 import video2 from './assets/video/tito-reggie-vid.m4v';
-// import video5 from './assets/video/kay-cartoon-vid.m4v';
+import video5 from './assets/video/jessica-vid.m4v';
 import video6 from './assets/video/kay-nico-dance-vid.m4v';
+import video7 from './assets/video/danny-vid.m4v';
 import video8 from './assets/video/princess-meow-vid.m4v';
 import video9 from './assets/video/levi-vid.m4v';
+import video10 from './assets/video/purple-v-vid.m4v';
 
 import photo4 from './assets/photo/mommy-pic.jpg';
+import photo10 from './assets/photo/v-photo.jpg';
 
 function App() {
   const quoteAuthorMedia = [
@@ -64,15 +67,15 @@ function App() {
     },
     {
       id: 5,
-      quote:  "I am so lucky to have you as my sister!",
+      quote:  "Grad school is annoying and hard but the good thing is you have a dream that you've been working hard to achieve for so long! Not everyone gets to do something that they love that inspires others like what you'll be doing.",
       author: 'Jessica',
       photo: null,
       audio: null,
-      video: null
+      video: video5
     },
     {
       id: 6,
-      quote: "Dear Kayleen: K Fart / f A rt / fart Y / L / E fart / E fart / N ico is very proud of you Good luck Grad Student",
+      quote: "Dear Kayleen: K fart / f A rt / fart Y / L / E fart / E fart / N ico is very proud of you Good luck Grad Student",
       author: 'Nico',
       photo: null,
       audio: null,
@@ -80,11 +83,11 @@ function App() {
     },
     {
       id: 7,
-      quote: "You are the coolest person ever!",
+      quote: "Keep up the hard work! It seems like it was just yesterday with you guys out in the backyard, we even graduated high school, playing paintball, skip rocks in the streets. Have a good time, stay safe, and keep working hard!",
       author: 'Danny',
       photo: null,
       audio: null,
-      video: null
+      video: video7
     },
     {
       id: 8,
@@ -96,11 +99,19 @@ function App() {
     },
     {
       id: 9,
-      quote: "So, Just Do The Best You Can And Choose Whichever You’ll Regret The Least.",
+      quote: "So, just do the best you can and choose whichever you’ll regret the least.",
       author: "Levi Ackerman",
       photo: null,
       audio: null,
       video: video9
+    },
+    {
+      id: 10,
+      quote: "When things get hard, stop for awhile and look back and see how far you’ve come. Don’t forget how rewarding it is. You are the most beautiful flower, more than anyone else in this world.",
+      author: "V (Kim Taehyung)",
+      photo: photo10,
+      audio: null,
+      video: video10
     }
   ];
 
@@ -113,11 +124,11 @@ function App() {
     ['#FF7EA8', '#FFB2D9']
   ];
 
-  const [quote, setQuote] = useState(quoteAuthorMedia[3]['quote']);
-  const [author, setAuthor] = useState(quoteAuthorMedia[3]['author']);
-  const [photo, setPhoto] = useState(quoteAuthorMedia[3]['photo']);
-  const [audio, setAudio] = useState(quoteAuthorMedia[3]['audio']);
-  const [video, setVideo] = useState(quoteAuthorMedia[3]['video']);
+  const [quote, setQuote] = useState(quoteAuthorMedia[0]['quote']);
+  const [author, setAuthor] = useState(quoteAuthorMedia[0]['author']);
+  const [photo, setPhoto] = useState(quoteAuthorMedia[0]['photo']);
+  const [audio, setAudio] = useState(quoteAuthorMedia[0]['audio']);
+  const [video, setVideo] = useState(quoteAuthorMedia[0]['video']);
   const [primaryColor, setPrimaryColor] = useState('');
   const [secondaryColor, setSecondaryColor] = useState('');
   const [previousQuoteIndex, setPreviousQuoteIndex] = useState(null);
