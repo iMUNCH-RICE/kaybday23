@@ -7,8 +7,11 @@ import QuoteDisplay from './components/QuoteDisplay.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRotate } from '@fortawesome/free-solid-svg-icons';
 
-import samplePic from './assets/pic0.png';
-import sampleAudio from './assets/zoro_01.mp3';
+import audio3 from './assets/zoro_01.mp3';
+
+import photo3 from './assets/pic0.png';
+import photo4 from './assets/photo/mommy-pic.jpg';
+import photo10 from './assets/photo/v-photo.jpg';
 
 import video0 from './assets/video/evan-vid.m4v';
 import video1 from './assets/video/tita-ezcel-vid.m4v';
@@ -19,9 +22,6 @@ import video7 from './assets/video/danny-vid.m4v';
 import video8 from './assets/video/princess-meow-vid.m4v';
 import video9 from './assets/video/levi-vid.m4v';
 import video10 from './assets/video/purple-v-vid.m4v';
-
-import photo4 from './assets/photo/mommy-pic.jpg';
-import photo10 from './assets/photo/v-photo.jpg';
 
 function App() {
   const quoteAuthorMedia = [
@@ -53,8 +53,8 @@ function App() {
       id: 3,
       quote: "When the world shoves you around, you just gotta stand up and shove back. It’s not like somebody’s gonna save you if you start babbling excuses.",
       author: 'Roronoa Zoro',
-      photo: samplePic,
-      audio: sampleAudio,
+      photo: photo3,
+      audio: audio3,
       video: null
     },
     {
@@ -67,7 +67,7 @@ function App() {
     },
     {
       id: 5,
-      quote:  "Grad school is annoying and hard but the good thing is you have a dream that you've been working hard to achieve for so long! Not everyone gets to do something that they love that inspires others like what you'll be doing.",
+      quote: "Grad school is annoying and hard but the good thing is you have a dream that you've been working hard to achieve for so long! Not everyone gets to do something that they love that inspires others like what you'll be doing.",
       author: 'Jessica',
       photo: null,
       audio: null,

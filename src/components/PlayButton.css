@@ -31,7 +31,6 @@
   color: var(--secondary-color);
 }
 
-
 .play-button:active {
   box-shadow: rgb(153, 153, 153) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.25) -3px -3px 6px 1px inset;
 }
