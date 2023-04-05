@@ -10,38 +10,45 @@ import { faRotate } from '@fortawesome/free-solid-svg-icons';
 import samplePic from './assets/pic0.png';
 import sampleAudio from './assets/zoro_01.mp3';
 
+import video0 from './assets/video/evan-vid.m4v';
+import video1 from './assets/video/tita-ezcel-vid.m4v';
+import video2 from './assets/video/tito-reggie-vid.m4v';
+// import video5 from './assets/video/kay-cartoon-vid.m4v';
+import video6 from './assets/video/kay-nico-dance-vid.m4v';
+import video8 from './assets/video/princess-meow-vid.m4v';
+import video9 from './assets/video/levi-vid.m4v';
+
+import photo4 from './assets/photo/mommy-pic.jpg';
+
 function App() {
   const quoteAuthorMedia = [
     {
       id: 0,
-      quote: 'Bark! Woof! Arf!',
-      author: 'Evan Panlilio',
-      media: 'evan-media',
-      pic: null,
+      quote: "Bark! Woof! Arf! (LET'S GOOOOOOO!!!)",
+      author: 'Evan',
+      photo: null,
       audio: null,
-      vid: null
+      video: video0
     },
     {
       id: 1,
-      quote: 'Example Quote 1',
+      quote: "We wish you all the best in your life...happiness and success. See you soon, we love you!",
       author: 'Tita Ezcel',
-      media: 'example-media-1',
       photo: null,
       audio: null,
-      video: null
+      video: video1
     },
     {
       id: 2,
-      quote: 'Example Quote 2',
+      quote: "I wish you all the best, and always take care of yourself. We love you! <3 <3",
       author: 'Tito Reggie',
-      media: 'example-media-2',
       photo: null,
       audio: null,
-      video: null
+      video: video2
     },
     {
       id: 3,
-      quote: 'When the world shoves you around, you just gotta stand up and shove back. It’s not like somebody’s gonna save you if you start babbling excuses.',
+      quote: "When the world shoves you around, you just gotta stand up and shove back. It’s not like somebody’s gonna save you if you start babbling excuses.",
       author: 'Roronoa Zoro',
       photo: samplePic,
       audio: sampleAudio,
@@ -49,35 +56,51 @@ function App() {
     },
     {
       id: 4,
-      quote: 'When the world shoves you around, you just gotta stand up and shove back. It’s not like somebody’s gonna save you if you start babbling excuses.',
+      quote: "Take a step back, inhale and laugh. Remember who you are and why you're here. You're never given anything in this world that you can't handle. Be strong, be flexible, love yourself, and love others.",
       author: 'Mommy? I guess LOL',
-      photo: samplePic,
-      audio: sampleAudio,
+      photo: photo4,
+      audio: null,
       video: null
     },
     {
       id: 5,
-      quote: 'When the world shoves you around, you just gotta stand up and shove back. It’s not like somebody’s gonna save you if you start babbling excuses.',
+      quote:  "I am so lucky to have you as my sister!",
       author: 'Jessica',
-      photo: samplePic,
-      audio: sampleAudio,
+      photo: null,
+      audio: null,
       video: null
     },
     {
       id: 6,
-      quote: "You're my inspiration",
+      quote: "Dear Kayleen: K Fart / f A rt / fart Y / L / E fart / E fart / N ico is very proud of you Good luck Grad Student",
       author: 'Nico',
-      photo: samplePic,
-      audio: sampleAudio,
-      video: null
+      photo: null,
+      audio: null,
+      video: video6
     },
     {
       id: 7,
-      quote: 'When the world shoves you around, you just gotta stand up and shove back. It’s not like somebody’s gonna save you if you start babbling excuses.',
+      quote: "You are the coolest person ever!",
       author: 'Danny',
-      photo: samplePic,
-      audio: sampleAudio,
+      photo: null,
+      audio: null,
       video: null
+    },
+    {
+      id: 8,
+      quote: "Meow (Meow)",
+      author: "Princess",
+      photo: null,
+      audio: null,
+      video: video8
+    },
+    {
+      id: 9,
+      quote: "So, Just Do The Best You Can And Choose Whichever You’ll Regret The Least.",
+      author: "Levi Ackerman",
+      photo: null,
+      audio: null,
+      video: video9
     }
   ];
 
@@ -85,7 +108,6 @@ function App() {
     ['#FF5E5E', '#FFB2B2'],
     ['#9C70C2', '#CFA5E6'],
     ['#F95F5F', '#FFB2B2'],
-    ['#f5985e', '#FFE5D9'],
     ['#35769C', '#8FCBEE'],
     ['#8B73E6', '#BAAFF5'],
     ['#FF7EA8', '#FFB2D9']

@@ -43,13 +43,12 @@ export default function QuoteDisplay(props) {
     <div className="quote" onClick={isModalOpen ? handleClickOutside : null}>
       <div
         className="icon-container"
-        style={{ display: 'flex', gap: '1rem', marginBlock: '1rem' }}
       >
-        <BsSoundwave
+        {/* <BsSoundwave
           size="2rem"
           className={`icon-sound${!props.audio ? ' disabled' : ''}`}
           onClick={props.audio ? () => openModal('sound') : null}
-        />
+        /> */}
         <HiOutlinePhotograph
           size="2rem"
           className={`icon-pic${!props.photo ? ' disabled' : ''}`}
@@ -70,24 +69,21 @@ export default function QuoteDisplay(props) {
             <button className="modal-close" onClick={closeModal}>
               &times;
             </button>
-            {currentMediaType === 'sound' && (
+            {/* {currentMediaType === 'sound' && (
               <div>
-                <h2>Sound Content</h2>
                 <audio ref={audioRef} controls>
                   <source src={props.audio} type="audio/mpeg" />
                   Your browser does not support the audio element.
                 </audio>
               </div>
-            )}
+            )} */}
             {currentMediaType === 'photo' && (
               <div>
-                <h2>Photo Content</h2>
                 <img src={props.photo} alt="" />
               </div>
             )}
             {currentMediaType === 'video' && (
               <div>
-                <h2>Video Content</h2>
                 <video ref={videoRef} controls>
                   <source src={props.video} type="video/mp4" />
                   Your browser does not support the video element.
